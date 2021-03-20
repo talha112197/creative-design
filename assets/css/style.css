@@ -1,0 +1,476 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+:root {
+    font-size: 62.5%;
+    --color-white: #fff;
+    --color-primary-m: rgba(50, 231, 255, 0.8);
+    --color-primary: rgba(50, 231, 255);
+
+}
+
+.ptb-10 {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+}
+
+body {
+    scroll-behavior: smooth;
+    font-size: 1.6rem;
+    font-family: "Bellota Text", cursive;
+    font-weight: 400;
+    overflow-x: hidden;
+}
+
+header#header {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-white);
+    position: relative;
+}
+
+header#header div.floating-bg {
+    position: absolute;
+    width: 150vw;
+    height: 150vw;
+    top: -111vw;
+    left: calc(50% - 75vw);
+    background-color: var(--color-primary-m);
+    border-radius: 45%;
+    animation: rotate 30s infinite;
+}
+
+header#header div.floating-bg::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50, 231, 255, 0.1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 40%;
+    animation: rotate 30s infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+nav.navbar {
+    position: relative;
+    z-index: 10;
+    top: 4rem;
+}
+
+nav.navbar ul.navbar-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+nav.navbar ul.navbar-nav li {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    width: 1.5rem;
+    word-wrap: break-word;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+}
+
+nav.navbar ul.navbar-nav li:hover {
+    width: 15rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: all 2.5s;
+}
+
+nav.navbar h1 {
+    font-size: 4rem;
+    font-family: "Monoton",
+        cursive;
+    position: absolute;
+    top: 28vw;
+    left: calc(50% - 22.5rem);
+    text-shadow: 0.3rem 0.3rem 0.3rem #888;
+    color: #fff;
+    background-color: #fff;
+    width: 43rem;
+    text-align: center;
+    padding: 0.8rem 1.6rem;
+    border-radius: 0.8rem;
+    opacity: 0.9;
+}
+
+header div.logo {
+    position: absolute;
+    top: 5%;
+    left: calc(50% - 6rem);
+    z-index: 10;
+}
+
+header i {
+    font-size: 7.5rem;
+    color: var(--color-white);
+    text-shadow: 0.1rem 0.1rem 0.2rem #ddd,
+        -0.1rem -0.1rem 0.2rem #ddd;
+}
+
+nav.navbar ul.navbar-nav li a {
+    text-decoration: none;
+    color: var(--color-white);
+}
+
+section#testimonials {
+    width: 100%;
+    height: 100%;
+}
+
+section#testimonials h2, section#team h2 {
+    font-size: 4rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgba(0, 0, 0, 0.4);
+    margin-bottom: 3rem;
+}
+
+section#testimonials div.testimonial-cards {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 5rem;
+    flex-wrap: wrap;
+}
+
+section#testimonials div.testimonial-cards div.card {
+    border: none;
+    background-color: #eee;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 1rem;
+    box-shadow: 1rem 1rem 2rem #ddd,
+        -1rem -1rem 2rem #eee;
+    transition: box-shadow 0.5s;
+    flex-basis: 30rem;
+    min-height: 50rem;
+    display: flex;
+    justify-content: space-evenly;
+    margin-right: 2rem;
+    
+}
+
+section#testimonials div.testimonial-cards div.card:hover {
+box-shadow: 2rem 2rem 3rem #ddd, -2rem -2rem 3rem #eee;
+}
+
+section#testimonials div.testimonial-cards div.card:first-child {
+    margin-top: -4rem;
+}
+
+section#testimonials div.testimonial-cards div.card:nth-child(2) {
+    margin-top: 0rem;
+}
+
+section#testimonials div.testimonial-cards div.card:nth-child(3) {
+    margin-top: 4rem;
+}
+
+section#testimonials div.testimonial-cards div.card img {
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+section#testimonials div.testimonial-cards div.card p.rating {
+    font-size: 2rem;
+}
+
+section#testimonials div.testimonial-cards div.card p.quote {
+    font-size: 4rem;
+    color: #f08e0f;
+}
+
+section#testimonials div.testimonial-cards div.card p.test-desc {
+    text-align: justify;
+}
+
+section#testimonials div.testimonial-cards div.card p.cust-name {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+section#team div.team-cards {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+section#team div.team-cards div.card{
+    flex-basis: 30rem;
+    position: relative;
+    border: none;
+    background-color: #fffeee;
+    padding: 1rem 1rem 2rem 1rem;
+    box-shadow: 1rem 1rem 2rem #ddd,
+    -1rem -1rem 2rem #eee;
+    position: relative;
+    opacity: 0.7;
+    transition: opacity 0.5s;
+    margin-bottom: 4rem;
+}
+
+section#team div.team-cards div.card:hover {
+    opacity: 1;
+}
+
+section#team div.team-cards div.card div.card-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    background-color: rgba(253, 69, 69, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+    transform-origin: top right;
+    transition: all 1s ease;
+}
+
+.show {
+    transform: scale(1) !important;
+    transition: all 1s ease;
+}
+
+.animate {
+    transform: rotate(360deg);
+    transition: all 0.5s ease-in-out;
+}
+
+section#team div.team-cards div.card div.card-content h3 {
+     font-size: 3rem;
+     font-weight: 700;
+     color: #fff;
+     margin-bottom: 2rem;
+}
+
+section#team div.team-cards div.card div.card-content p {
+     font-size: 1.4rem;
+     color: #eee;
+     text-align: justify;
+     letter-spacing: 0.1rem;
+     text-indent: 2rem;
+     font-weight: 200;
+}
+
+section#team div.team-cards div.card div.open-btn {
+    position: absolute;
+    background-color: #333;
+    padding: 1rem;
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    text-align: center;
+    right: -2rem;
+    top: -2rem;
+    cursor: pointer;
+}
+
+section#team div.team-cards div.card div.open-btn i {
+    color: var(--color-white);
+}
+
+section#team div.team-cards div.card a {
+    background-color: #fab34a;
+    color: #fff;
+    padding: 0.5rem 1.5rem;
+    border-radius: 5rem;
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+    width: 50%;
+}
+
+section#team div.team-cards div.card img {
+    border-radius: 0.5rem;
+}
+
+section#team div.team-cards div.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 20rem;
+}
+
+section#team div.team-cards div.card-body h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #796717;
+    margin-top: 2rem;
+}
+
+section#team div.team-cards div.card-body h3 span {
+    font-size: 1.5rem;
+}
+
+section#team div.team-cards div.card-body p {
+font-size: 1.5rem;
+color: #505050;
+}
+
+section#contact div.container {
+    background-color: #e5e9ff;
+    box-shadow: 0.3rem 0.3rem 0.4rem #ccc,
+    -0.1rem -0.1rem 0.4rem #ccc;
+    border-radius: 0.5rem;
+    perspective: 100rem;
+}
+
+section#contact div.container img {
+ width: 45rem;
+ background-color: rgba(50, 231, 255, 0.8);
+ padding: 5rem;
+ opacity: 0.8;
+ box-shadow: -3rem 3rem 4rem #aaa;
+ border-radius: 0.5rem;
+ transform: rotateY(20deg);
+ transition: all 0.5s;
+}
+
+section#contact div.container div.contact-form {
+   background-color: #fff;
+   padding: 3rem;
+   border-radius: 0.5rem;
+   box-shadow: 3rem 3rem 4rem #aaa;
+   transform: rotateY(-20deg);
+   transition: all 0.5s;
+}
+
+section#contact div.container div.contact-form:hover,
+section#contact div.container img:hover {
+    transform: translateY(-2rem) rotateY(0);
+    box-shadow: 5rem 5rem 7rem #aaa;
+}
+
+section#contact div.container div.contact-form form {
+   display: flex;
+   flex-direction: column;
+}
+
+.contact-form form input,
+.contact-form form textarea {
+    padding: 1.5rem;
+    font-size: 1.3rem;
+    letter-spacing: 0.1rem;
+    border: none;
+    border-radius: 2rem;
+    box-shadow: inset 0.1rem 0.1rem 0.2rem #ddd, inset -0.1rem -0.1rem 0.2rem #ddd;
+}
+
+.contact-form form button {
+    background-color: rgba(50, 231, 255, 0.8);
+    color: #fff;
+    font-weight: bolder;
+    font-size: 2rem;
+    letter-spacing: 0.5rem;
+    transition: background-color 0.5s;
+    border-radius: 2rem;
+    margin: 0 auto;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: #32e7ff;
+}
+
+footer p {
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+    color: #444;
+}
+
+.scroll-to-top {
+     width: 5rem;
+     height: 5rem;
+     background-color: rgba(50, 231, 255, 0.8);
+     position: fixed;
+     bottom: 5rem;
+     right: 5rem;
+     border-radius: 50%;
+     text-align: center;
+     cursor: pointer;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     opacity: 0;
+     transition: all 0.5s ease-in-out;
+}
+
+.visible {
+    opacity: 1 !important;
+    
+}
+
+.scroll-to-top i {
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+@media (max-width: 920px) {
+    nav.navbar ul.navbar-nav li {
+        width: 100%;
+        word-wrap: normal;
+    }
+
+    header div.logo {
+        top: 20%;
+    }
+
+    nav.navbar h1 {
+        top: 20vw;
+    }
+}
+
+@media (max-width: 785px) {
+
+    header div.logo {
+       display: none;
+    }
+
+    nav.navbar h1 {
+        top: 20vw;
+    }
+}
+
+@media (max-width: 675px) {
+    
+    nav.navbar h1 {
+        top: 70vw;
+    }
+
+    nav.navbar h1 {
+        background-color: #f08e0f;
+    }
+
+    section#contact div.container div.contact-form,
+    section#contact div.container img {
+        transform: rotateY(0);
+    }
+}
